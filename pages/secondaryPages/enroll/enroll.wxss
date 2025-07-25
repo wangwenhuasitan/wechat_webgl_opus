@@ -1,0 +1,18 @@
+/* pages/secondaryPages/enroll/enroll.wxss */
+.avatar-wrapper{
+background-color: lavender;
+}
+.avatar{
+  width:416rpx;
+  height: 416rpx;
+  margin-top:145rpx;
+}
+.weui-input{
+  height: 91rpx;
+margin-top: 25rpx;
+text-align: center;
+background-color: lavender;
+}
+.submit{
+  background-color: green;
+}

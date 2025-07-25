@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <button bind:tap="goToLogin" class="login">登录</button>
+</view>

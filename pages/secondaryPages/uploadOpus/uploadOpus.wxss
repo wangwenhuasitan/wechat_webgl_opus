@@ -1,0 +1,94 @@
+/* pages/secondaryPages/uploadOpus/uploadOpus.wxss */
+
+.container {
+ height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+} 
+.scrollarea{ 
+  overflow-y: auto;  
+  flex:1; 
+  padding: 16rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.opusType{ 
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+}
+.clickText{
+  height: 91rpx;
+  padding: 25rpx;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  background-color: lightblue;
+}
+.picker{
+  flex: 1;
+  height:91rpx; 
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  border-bottom: gray solid 1px;
+  box-sizing: border-box;
+}
+.multiLineField{
+width:700rpx;  
+  margin: 16rpx auto;
+  border:black 1px solid;
+  padding:16rpx;
+  box-sizing:border-box;
+}
+.down{
+  font-size: 25rpx;
+  margin-left:25rpx;
+}
+.opusName{
+  display:flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16rpx auto;
+}
+.title{
+  font-size: 1rem;
+  margin: auto 25rpx;
+  line-height: 45rpx;
+}
+.titleInput{
+  flex:1;
+  height:91rpx; 
+  border:black 1px solid;
+  padding:16rpx;
+  margin-right: 25rpx;
+  box-sizing:border-box;
+}
+.uploadSection{
+  display:flex;
+  flex-direction: row;
+  border-bottom: lightslategrey 1px solid;
+  padding-bottom: 16rpx;
+margin: 16rpx 25rpx;
+}
+.uploadjs{
+  height: 91rpx;
+  width: 100%;
+  background-color:lightgray;
+}
+.submit{
+  height: 91rpx;
+  width: 50%;
+  background-color: rgb(255, 206, 47);  
+}
+.footer{
+  padding-bottom: env(safe-area-inset-bottom);
+}

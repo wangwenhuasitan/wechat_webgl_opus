@@ -1,0 +1,59 @@
+<!--pages/serviceCenter/serviceCenter.wxml-->
+<view class="container" style="padding-top:{{system.statusBarHeight}}px">
+  <view class="tabListFlex">
+    <view wx:for="{{listItem}}" wx:key="index" class="tabListItem" bind:tap="onTabItemClick" data-index="{{index}}" style="{{activeIndex===index?'background-color:rgb(255,122,0);':''}}">
+      <text>{{item}}</text>
+    </view>  
+  </view>
+  <view hidden="{{activeIndex===0?false:true}}">
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="注册用户" name="1">
+        未注册过的用户，头像和昵称都不显示。需要注册则点击注册页的头像和昵称图标，系统将使用用户的微信头像和昵称作为注册信息。下次直接登录将显示这些信息。
+      </van-collapse-item>
+      <van-collapse-item title="上传作品" name="2">
+        上传作品需要附带的重要文件有三个。实现webgl作品的JavaScript代码文件；JavaScript调用的模型文件；作品的预览图文件。文件上传之后作品不会马上展示，需要后端审核通过之后才能展示。审核的进度会在用户的作品列表中展示。
+      </van-collapse-item>
+      <van-collapse-item title="作品规范" name="3">
+      <text>
+        JavaScript代码文件要求是一个class类文件，并且在打包过程中不要将three.js打包进去。文件大小不能超过600KB,代码的实现要求提供以下属性和方法：
+      </text>
+        <text>
+          " const opusObject = new yourClass({
+        container: canvas
+      });
+      opusObject.loadScene({
+        url: "thePathOfTheModelFileUrl",        
+        floorName: "地面模型对象的名称"
+      });
+      const opus_platform = opusObject.wechatPlatform
+    })"
+        </text>
+       
+      </van-collapse-item>
+      <van-collapse-item title="处理通知" name="4">
+        如果您希望与后台联系，请您在用户反馈中提交信息。我们将会以向您发通知的形式回复您。
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+  <form bindsubmit="goToFeedback">
+    <view hidden="{{activeIndex===1?false:true}}">
+    <view>
+      <text>标题</text>
+      <input class="singleLineField" placeholder="在这里给内容起个标题" maxlength="20" name="title"/>
+    </view>
+    <view>
+      <text>问题与意见</text>
+      <textarea class="multiLineField" placeholder="在这里填写内容" maxlength="300" auto-height="true" name="content"></textarea>
+    </view>
+    <view>
+      <text>图片（提供图片参考）</text>
+      <view>
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="deleteSelected"/>
+      </view>
+    </view>
+    <view class="floor">
+      <button class="submit" form-type="submit">提交</button>
+    </view>
+  </view>
+  </form>  
+</view>

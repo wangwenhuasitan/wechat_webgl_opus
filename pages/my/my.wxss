@@ -1,0 +1,53 @@
+/* pages/my/my.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.arrow-left{
+  font-size: 25rpx;
+  margin-left: 25rpx;
+}
+.cueText {
+  font-size: 29rpx;
+  margin: 0 16rpx;
+}
+
+.avatorBox {
+  border-bottom: darkgray solid 1px;
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avator {
+  width: 266rpx;
+  height: 266rpx;
+  background-color: darkgray;
+  border-radius: 133rpx;
+}
+.settingsBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;  
+}
+.settings{
+  display: flex;  
+  align-items: center;
+  width: 100%;
+  height: 91rpx;
+  border-bottom: darkgray solid 1px;
+  border-radius:16rpx;
+}
+.setTheNameOfTheItem{ 
+margin-left:25rpx;
+}

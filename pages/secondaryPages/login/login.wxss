@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+.container {  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.login{
+  height: 91rpx;
+  width:70%;
+  margin-top: 30vh;
+  background-color: green;
+ 
+}

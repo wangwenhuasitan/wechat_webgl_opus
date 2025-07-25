@@ -1,0 +1,8 @@
+<!--pages/secondaryPages/enroll/enroll.wxml-->
+<form bindsubmit="goToEnroll">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button>
+  <input type="nickname" class="weui-input" placeholder="请输入昵称" name="nickname" />
+  <button form-type="submit" class="submit">提交注册</button>
+</form>

@@ -1,0 +1,53 @@
+/* pages/serviceCenter/serviceCenter.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tabListFlex {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 102rpx;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: gainsboro;
+  border-bottom: rgb(88, 88, 88) solid 1rpx;
+  box-sizing: border-box;
+}
+.tabListItem {
+  width: 25%;
+  text-align: center;
+  padding:25rpx; 
+}
+.tabListItem:active {
+  width: 25%;
+  text-align: center;
+  padding:25rpx; 
+  background-color:rgb(255,122,0);
+}
+.multiLineField{
+  border:black 1px solid;
+  padding:16rpx;
+  box-sizing:border-box;
+}
+.singleLineField{ 
+  padding:16rpx;  
+  height: 91rpx;
+  border: rgb(88, 88, 88) solid 1rpx;
+  box-sizing: border-box;
+}
+.floor{
+  display: flex; 
+  width: 100%; 
+  padding:91rpx 25rpx;
+  box-sizing:border-box;
+}
+.submit{
+  width:60%;
+  background-color:green;
+}

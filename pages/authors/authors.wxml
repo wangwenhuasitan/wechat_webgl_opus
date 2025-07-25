@@ -1,0 +1,25 @@
+<!--pages/authors/authors.wxml-->
+<view class="container" style="padding-top:{{system.statusBarHeight}}px">
+  <navbar style="width:100%;">
+    <view class="dummyInput" style="border-radius: {{capsule.height/2}}px;line-height:{{capsule.height}}px">
+    <van-icon name="search" custom-class="search"></van-icon>
+      <text class="cueText">搜索作者</text>
+    </view>
+  </navbar> 
+  <tabList style="width:100%;" listItem="{{listItem}}"></tabList> 
+  <scroll-view class="scrollarea" scroll-y type="list">      
+        <block wx:for="{{authorsList}}" wx:key="index">
+          <view class="tabListItem" bind:tap="toDetail">
+          <view class="detailLeft">
+          <image class="avator" src="{{item.avatar}}"></image>
+          </view>
+          <view class="detailRight">
+            <text class="description">昵称：{{item.nickname}}</text>
+            <text class="description">个人简介：{{item.biography}}</text>
+            <text class="description">技能列表：{{index+1}}</text>
+            <text class="description">当前名次：{{item.id}}</text>
+          </view>           
+          </view>
+        </block>      
+    </scroll-view>  
+</view>

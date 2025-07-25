@@ -1,0 +1,2 @@
+<!--packageWorkDetail/pages/detail/detail.wxml-->
+<canvas class="webgl" type="webgl" id="gl" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd" bind:tap="onTap" bindlongpress="onLongpress"></canvas>

@@ -1,0 +1,84 @@
+/* pages/basicInformation/basicInformation.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goToBack{
+  display: flex;
+}
+.arrow-left{
+  font-size: 25rpx;
+  margin-left: 25rpx;  
+}
+.cueText { 
+  font-size: 29rpx;
+  margin: 0 auto;  
+}
+
+.avatorBox {
+  border-bottom: rgb(41, 40, 40) solid 1px;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avator {
+  display: flex;
+  width: 145rpx;
+  height: 145rpx;
+  background-color: darkgray;
+  border-radius: 133rpx;
+  justify-content: center;
+  align-self: center;
+}
+.settingsBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;  
+}
+.settings{
+  display: flex;  
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+  border-bottom: darkgray solid 1px;
+  border-radius:16rpx;
+  margin-right:25rpx;
+  padding:25rpx;
+  box-sizing:border-box;
+}
+.setTheNameOfTheItem{ 
+  line-height: 91rpx;
+margin-left:25rpx;
+}
+.multiLineField{
+  border:black 1px solid;
+  padding:16rpx;
+  box-sizing:border-box;
+  margin-left:16rpx;
+}
+.singleLineField{ 
+  padding:16rpx;  
+  height: 91rpx;
+  box-sizing:border-box; 
+}
+.floor{
+  display: flex; 
+  width: 100%; 
+  padding:91rpx 25rpx;
+  box-sizing:border-box;
+}
+.submit{
+  width:60%;
+  background-color:green;
+}

@@ -1,0 +1,4 @@
+<!--components/navbar/navbar.wxml-->
+<view class="navbar_box" style="height:{{navbarHeight}}px;padding-top:{{paddingTop}}px;padding-bottom:{{paddingTop}}px;padding-left:{{paddingLeft}}px;padding-right:{{paddingRight}}px;">
+<slot></slot>
+</view>

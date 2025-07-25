@@ -1,0 +1,6 @@
+/* packageWorkDetail/pages/detail/detail.wxss */
+.webgl {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}

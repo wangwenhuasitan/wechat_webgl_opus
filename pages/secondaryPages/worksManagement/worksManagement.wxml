@@ -1,0 +1,37 @@
+<!--pages/secondaryPages/worksManagement/worksManagement.wxml-->
+<view class="container">
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <block wx:for="{{listData}}" wx:key="id">
+      <view class="tabListItem" bind:tap="toDetail" data-type="{{item.type}}">
+        <view class="cardTop">
+          <view>
+            <text class="title">作品描述：</text><text class="body">abcdefg</text>
+          </view>
+          <van-icon name="star-o" custom-class="star"></van-icon>
+        </view>
+        <image class="thumbnail">缩略图</image>
+        <view class="cardBottom">
+          <view>
+            <text class="title">作品标题：</text><text class="body">{{item.name}}</text>
+          </view>
+          <view class="cardBottom">
+            <image class="avatar"></image><text>作者昵称</text>
+          </view>
+        </view>
+        
+      </view>
+      <view class="cardHandler">
+        <button class="handlerButton">编辑</button><button class="handlerButton">删除</button>
+        </view>
+    </block>
+  </scroll-view>
+
+  <view class="uploadFileBox">
+    <navigator url="/pages/secondaryPages/uploadOpus/uploadOpus">
+      <button class="uploadFileButton">上传作品</button>
+    </navigator>
+    <input class="inputBox" placeholder="点击上传作品" disabled="true" />
+  </view>
+
+
+</view>

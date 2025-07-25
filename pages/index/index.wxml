@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container" style="padding-top:{{system.statusBarHeight}}px"> 
+  <navbar style="width:100%;">
+    <view class="dummyInput" style="border-radius: {{capsule.height/2}}px;line-height:{{capsule.height}}px">
+    <van-icon name="search" custom-class="search"></van-icon>
+      <text class="cueText">请输入你想找的作品名称</text>
+    </view>
+  </navbar>  
+  <tabList style="width:100%;" listItem="{{listItem}}"></tabList>  
+    <scroll-view class="scrollarea" scroll-y type="list">      
+        <block wx:for="{{listData}}" wx:key="id">
+          <view class="tabListItem" bind:tap="toDetail" data-type="{{item.type}}">
+          <view class="cardTop">
+          <view>
+            <text class="title">作品描述：</text><text class="body">abcdefg</text>
+          </view>
+          <van-icon name="star-o" custom-class="star"></van-icon>
+          </view>
+          <image class="thumbnail">缩略图</image>
+          <view class="cardBottom">
+          <view>
+            <text class="title">作品标题：</text><text class="body">{{item.name}}</text>
+          </view>
+         <view class="cardBottom">
+          <image class="avatar"></image><text>作者昵称</text>
+         </view>          
+          </view>          
+          </view>
+        </block>      
+    </scroll-view>  
+</view>

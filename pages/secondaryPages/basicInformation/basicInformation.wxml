@@ -1,0 +1,32 @@
+<!--pages/basicInformation/basicInformation.wxml-->
+<!--pages/my/my.wxml-->
+<view class="container" style="padding-top:{{windowInfo.statusBarHeight}}px">
+  <navbar style="width:100%;">
+    <navigator open-type="navigateBack" class="goToBack">
+    <van-icon name="arrow-left" custom-class="arrow-left"></van-icon>
+    </navigator>
+    <block wx:if="{{author.nickname}}">
+      <text class="cueText" style="line-height: {{capsule.height}}px;">{{author.nickname}}</text>
+    </block>
+    <block wx:else>
+      <text bind:tap="toLogin" class="cueText" style="line-height: {{capsule.height}}px;">基本信息</text>
+    </block>
+  </navbar>  
+  <view class="settingsBox">
+    <view class="settings">
+    <text class="setTheNameOfTheItem">头像</text>
+    <image class='avator' src='{{author.avatar}}'></image>
+  </view>
+    <view class="settings">      
+      <text class="setTheNameOfTheItem">昵称</text>
+      <text  class="singleLineField">{{author.nickname}}</text>      
+    </view>
+    <view class="settings">      
+      <text class="setTheNameOfTheItem">个人签名</text>
+      <textarea class="multiLineField" placeholder="在这里填写详细的自我介绍" bindinput="getInput" value="{{author.biography}}"></textarea>
+    </view>  
+  </view>
+  <view class="floor">
+  <button class="submit" bind:tap="goToRevise">修改</button>
+  </view>
+</view>

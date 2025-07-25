@@ -1,0 +1,49 @@
+<!--pages/secondaryPages/uploadOpus/uploadOpus.wxml-->
+<form bindsubmit="goToUpload">
+  <view class="container">
+  <view class="opusType">
+    <view class="clickText">
+      <text>点击选择作品分类：</text>
+    </view>
+    <picker class="picker" header-text="作品分类" range="{{typeArray}}" bindchange="changeType" value="{{opusType}}" name="opusType">
+      <view>
+        {{typeArray[opusType]}}
+        <van-icon name="down" custom-class="down"></van-icon>
+      </view>
+    </picker>
+  </view>
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <view class="opusName">
+      <text class="title">标题:</text>
+      <input class="titleInput" placeholder="给作品起个名字" maxlength="20" name="title"></input>
+    </view>
+    <text class="title">作品描述:</text>
+    <textarea class="multiLineField" placeholder="在这里填写内容" maxlength="300" auto-height="true" name="descriptionOfTheWork"></textarea>
+    <text class="title">技术栈:</text>
+    <textarea class="multiLineField" placeholder="在这里填写内容" maxlength="200" auto-height="true" name="techStack"></textarea>  
+    <view class="uploadSection">
+      <text class="title" bind:tap="uploadJs">JavaScript文件上传</text>
+      <van-uploader file-list="{{ jsfileList }}" max-count="1" accept="file" preview-file="false" max-size="614400" bind:delete="deleteJS" disabled="true">
+        <button class="uploadjs">+three.js</button>
+      </van-uploader>
+    </view>
+    <view class="uploadSection">
+      <text class="title" bind:tap="uploadModel">模型文件上传</text>
+      <van-uploader file-list="{{ modelfileList }}" max-count="1"  accept="file" preview-file="false" disabled="true" bind:delete="deleteModel" >
+        <button class="uploadjs">+model.gltf</button>
+      </van-uploader>
+    </view>
+    <view class="uploadSection">
+      <text class="title" bind:tap="uploadResource">贴图与其它资源文件上传</text>
+      <van-uploader file-list="{{ resourcefileList }}" preview-size="125rpx" multiple="true" bind:delete="deleteResource" disabled="true"/>
+    </view>
+    <view class="uploadSection">
+      <text class="title" bind:tap="uploadThumbnail">缩略图上传</text>
+      <van-uploader file-list="{{ thumbnailfileList }}" preview-size="125rpx" max-count="1" disabled="true" bind:delete="deleteThumbnail" />
+    </view>
+  </scroll-view>
+  <view class="footer">
+    <button class="submit" form-type="submit">开始上传</button>
+  </view>
+</view>
+</form>

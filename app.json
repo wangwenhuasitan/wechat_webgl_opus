@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/serviceCenter/serviceCenter",
+    "pages/my/my",
+    "pages/authors/authors",
+    "pages/secondaryPages/login/login",
+    "pages/secondaryPages/basicInformation/basicInformation",
+    "pages/secondaryPages/enroll/enroll",
+    "pages/secondaryPages/worksManagement/worksManagement",
+    "pages/secondaryPages/uploadOpus/uploadOpus"
+  ],
+  "subPackages": [
+    {
+      "root": "packageWorkDetail",
+      "pages": [
+        "pages/detail/detail"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "webgl_opus",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#08f",
+    "selectedColor": "#f60",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-active.png"
+      },
+      {
+        "pagePath": "pages/authors/authors",
+        "text": "作者群",
+        "iconPath": "static/author.png",
+        "selectedIconPath": "static/author-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "static/my.png",
+        "selectedIconPath": "static/my-active.png"
+      },
+      {
+        "pagePath": "pages/serviceCenter/serviceCenter",
+        "text": "帮助",
+        "iconPath": "static/serve.png",
+        "selectedIconPath": "static/serve-active.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json"
+}

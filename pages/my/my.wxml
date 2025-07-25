@@ -1,0 +1,42 @@
+<!--pages/my/my.wxml-->
+<view class="container" style="padding-top:{{system.statusBarHeight}}px">
+  <navbar style="width:100%;">    
+    <block wx:if="{{author.nickname}}">
+      <text class="cueText" style="line-height: {{capsule.height}}px;">{{author.nickname}}</text>
+    </block>
+    <block wx:else>
+      <text bind:tap="toLogin" class="cueText" style="line-height: {{capsule.height}}px;">登录</text>
+    </block>
+  </navbar>
+  <view class="avatorBox">
+    <image class='avator' src='{{author.avatar}}'></image>
+  </view>
+  <view class="settingsBox">
+    <view class="settings">
+      <van-icon name="description-o" custom-class="arrow-left"></van-icon>
+      <text bind:tap="goToBasicInformation" class="setTheNameOfTheItem">基本信息</text>
+    </view>
+    <view class="settings">
+      <van-icon name="label-o" custom-class="arrow-left"></van-icon>
+      <text class="setTheNameOfTheItem">技能标签</text>
+    </view>
+    <view class="settings">
+      <navigator url="/pages/secondaryPages/worksManagement/worksManagement">
+        <van-icon name="edit" custom-class="arrow-left"></van-icon>
+      <text class="setTheNameOfTheItem">作品管理</text>
+      </navigator>      
+    </view>
+    <view class="settings">
+      <van-icon name="star-o" custom-class="arrow-left"></van-icon>
+      <text class="setTheNameOfTheItem">我的收藏</text>
+    </view>
+    <view class="settings">
+      <van-icon name="info-o" custom-class="arrow-left"></van-icon>
+      <text class="setTheNameOfTheItem">消息通知</text>
+    </view>
+    <view class="settings">
+      <van-icon name="manager-o" custom-class="arrow-left"></van-icon>
+      <text class="setTheNameOfTheItem">管理平台</text>
+    </view>
+  </view>
+</view>

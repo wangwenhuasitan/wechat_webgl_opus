@@ -1,0 +1,12 @@
+<!--components/tabList/tabList.wxml-->
+<view class="tabList">
+    <scroll-view class="scrollTabList" scroll-x type="list">
+      <view class="tabListFlex">
+        <view wx:for="{{listItem}}" wx:key="index">
+          <view class="tabListItem">
+            <text>{{item}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

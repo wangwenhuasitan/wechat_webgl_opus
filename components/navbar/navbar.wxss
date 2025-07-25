@@ -1,0 +1,9 @@
+/* components/navbar/navbar.wxss */
+.navbar_box{
+  width:100%;
+  background-color: aqua;
+  border-bottom:rgb(92, 92, 92) solid 1px;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: row;  
+}

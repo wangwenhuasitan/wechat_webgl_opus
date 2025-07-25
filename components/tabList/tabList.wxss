@@ -1,0 +1,26 @@
+/* components/tabList/tabList.wxss */
+.tabList {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  border-bottom: rgb(88, 88, 88) solid 1rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 102rpx;
+  background-color: gainsboro;
+}
+
+.tabListFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #666;
+}
+
+.tabListItem {
+  width: 200rpx;
+  margin-left: 36rpx;
+  text-align: center;
+}
